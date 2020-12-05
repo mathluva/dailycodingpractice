@@ -5,6 +5,8 @@
 // // values.forEach(arraysum);
 // var total = 0;
 
+// import { stringify } from "querystring";
+
 // // function arraysum(ar){
 // //      var final =sum(ar);
 // // // for(var i=0; i<ar.length;i++ ){
@@ -56,34 +58,101 @@
 //     for(var i=0; i<nums.length;i++){
 //         for(var j= i+1; j<nums.length; j++)
 //             if (nums[i]+nums[j]==target){
-//                 console.log(i,j);
+//                 return (i,j);
 //             }
 //             else{
-//             console.log("-1,-1");
+//                 return (-1,-1);
 //             }
 //     }
 // };
 // numbers=[3,4,6,0,10]
 // value= 10
-// twoSum(numbers,value);
+// console.log(twoSum(numbers,value));
 
-var pairs =0;
-function sockMerchant(ar) {
-    for(var i =0; i<ar.length; i++){
-        for(var j = i+1; j<ar.length-1; j++){
-            if(ar[i]===ar[j]){
-                pairs = pairs +1;
-                // console.log(i,j);
-                ar.splice(i,1);
-            }
-        }
-    }
-    console.log(pairs);
-    console.log(ar);
-};
+// var pairs =0;
+// function sockMerchant(ar) {
+//     for(var i =0; i<ar.length; i++){
+//         for(var j = i+1; j<ar.length-1; j++){
+//             if(ar[i]===ar[j]){
+//                 pairs = pairs +1;
+//                 ar.splice(i,1);// remove item from array
+//             }
+//         }
+//     }
+//     console.log(pairs);
+//     console.log(ar);
+// };
 
 
-// var number_socks = 10
-sock_color = [1,1,2,2,3,5]
-// sock_color = [1,4,3,5,4,1,3,5,1,3]
-sockMerchant(sock_color);
+// // var number_socks = 10
+// sock_color = [1,1,2,2,3,5]
+// // sock_color = [1,4,3,5,4,1,3,5,1,3]
+// sockMerchant(sock_color);
+
+// class Solution {
+//     /**
+//      * @param {TreeNode} root
+//      * @return {number[][]}
+//      */
+//     dfs(root, level,result){
+//         if(root === null){
+//             return;
+//         }
+//         if(level >= result.length){
+//             var arr =[];
+//             result.push(arr);
+//         }
+//             result[level].push(root.value);
+//     }
+    
+//     zigzagTraversal(root) {
+    
+//     }  
+// }
+
+
+// let r = /";;4. ;) 08 785$/$:$$:$:9/:/-.962$3"$
+// let numbers = /[0-9]/g;
+// let result = str.match(numbers);
+// console.log(result);
+
+// console.log('Izayah');
+    
+//     for(let i =0; i< ar.length; i++){
+//         for(let j = 0; j< ar -1 ; j ++)
+//         if (ar[i]===b[j]){
+//             ar.slice(i,1);
+            
+//         } 
+//     console.log(ar);
+
+// // let r = /\w+@\w+\.(net|com|org)
+// let s = 'unicorns and stars' //string
+// //let r = /star/; //regular expression
+// let r = /[a-z]+/g;
+
+// console.log(r.test(s)); //
+// console.log(s.match(r));// gives what was matched
+// //g for global, i for case sensitive, returns and array
+
+//regular phone expression
+//3 digits followed by a dash or . and 4 digits
+// var r = /\d{6}[-.]\d{4}/g; 
+
+//Input: ";;4. ;) 08 785$/$:$$:$:9/:/-.962$3"
+//Output: "(408) 785-9962"
+
+let reg = /[0-9]/g; //reg exp
+let str = ";;4. ;) 08 785$/$:$$:$:9/:/-.962$3"; 
+let digits = str.match(reg); //return the array of reg matches
+
+//console.log(digits);
+
+const phone = arr => {
+    arr = arr.join('');
+    return '(' + arr.substring(0,3) + ')' 
+        + arr.substring(3, 6)
+        + '-'
+        + arr.substring(6,10);
+  };
+console.log(phone(digits));
