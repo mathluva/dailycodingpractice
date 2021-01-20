@@ -66,6 +66,10 @@ for item in arr:
 arr = new_arr
 print(arr)
 
+for i in arr:
+    print(i)
+print(arr)
+
 
 
 
