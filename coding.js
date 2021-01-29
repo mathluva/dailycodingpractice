@@ -142,17 +142,43 @@
 //Input: ";;4. ;) 08 785$/$:$$:$:9/:/-.962$3"
 //Output: "(408) 785-9962"
 
-let reg = /[0-9]/g; //reg exp
-let str = ";;4. ;) 08 785$/$:$$:$:9/:/-.962$3"; 
-let digits = str.match(reg); //return the array of reg matches
+// let reg = /[0-9]/g; //reg exp
+// let str = ";;4. ;) 08 785$/$:$$:$:9/:/-.962$3"; 
+// let digits = str.match(reg); //return the array of reg matches
 
-//console.log(digits);
+// //console.log(digits);
 
-const phone = arr => {
-    arr = arr.join('');
-    return '(' + arr.substring(0,3) + ')' 
-        + arr.substring(3, 6)
-        + '-'
-        + arr.substring(6,10);
-  };
-console.log(phone(digits));
+// const phone = arr => {
+//     arr = arr.join('');
+//     return '(' + arr.substring(0,3) + ')' 
+//         + arr.substring(3, 6)
+//         + '-'
+//         + arr.substring(6,10);
+//   };
+// console.log(phone(digits));
+
+
+
+/* Hackerrank Cloud*/
+clouds = [0, 0, 0, 0, 1, 0]
+clouds2 = [0, 0, 1, 0, 0, 1, 0]
+function jumpingOnClouds(c) {
+    let jumps = 0;
+    for(let i = 0; i<c.length-1;){
+          if( c[i]==c[i+1] && c[i+2]==0){
+              jumps +=1;
+              i = i+2;
+          }
+          else if(c[i]==c[i+1] && c[i+2]==1){
+              jumps +=1;
+              i = i+1;
+          }
+          else{
+              jumps +=1;
+              i = i+2;
+          }
+        }
+    return jumps;
+}
+console.log(jumpingOnClouds(clouds));
+console.log(jumpingOnClouds(clouds2));

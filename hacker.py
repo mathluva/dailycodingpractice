@@ -1,3 +1,5 @@
+
+
 healthy = ['kale', 'broccoli']
 backpack = ['pizza', 'frozen', 'apple', 'kale']
 
@@ -221,7 +223,29 @@ def binary_search(sequence, item): #find item in the sequence (already sorted li
             begin_index = midpoint +1 #check items to right by reposition the begin index
     return None #if item not find in loop, while loop breaks
 
-print(binary_search(sorted(data), 4))
+print(binary_search(sorted(data), 4)) #returns 3 because 4 is index 3 position
 
 
+#######Using Counter to count occurences of item in an array ########
+from collections import Counter
 
+data = ['a', 'b','c', 'b', 'a', 'a']
+tally = Counter(data)
+print(tally) # Counter({'a': 3, 'b': 2, 'c': 1})
+print(tally.values()) #dict_values([3, 2, 1])
+
+pairs = 0
+for val in tally.values():
+    pairs = val
+print(pairs)
+
+def fizzBuzz(n):
+   if n % 3 ==0 and n % 5 ==0:
+        print('FizzBuzz')
+   elif n%3 ==0 and n%5 !=0:
+        print('Fizz')
+   elif n% 5 ==0 and n%3 != 0:
+        print('Buzz')
+   elif n%5 !=0 or n%3!=0:
+    print(n)
+fizzBuzz(82)
