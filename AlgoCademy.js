@@ -122,3 +122,29 @@ function peakelements(nums){
     return list;
 };
 console.log(peakelements(arr));// [ 1, 5 ]
+
+/*##################  Factorial using Recursion ########### */
+
+function factorial(n) {
+    let fact =1;
+    for(let i = 1; i <= n; i++){
+        fact = fact * i;
+    }
+    return fact;
+}
+
+console.log(factorial(4));//24
+
+/*##################  Factorial using Recursion II ########### */
+
+function factorial2(n) {
+        if(n == 0){
+            return 1;
+        }
+        else{
+            return factorial(n-1) *n;
+        }
+    }
+console.log(factorial2(5));//24
+
+
