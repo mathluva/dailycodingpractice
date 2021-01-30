@@ -4,16 +4,20 @@ arr = [5, 9, 3, 6, 2, 1, 3, 2, 7, 5], k = 4
 
 function kSmallest(nums) {
     nums.sort((first,last) => first-last); //sort array in asc order
+    nums.sort((first,last) => last-first); //sort array in desc order
             return nums;
         
 };
 
 console.log(kSmallest(arr)); //[1, 2, 2, 3, 3,5, 5, 6, 7, 9]
 
+arr = [5, 9, 3, 6, 2, 1, 3, 2, 7, 5]
 
-
-
-
+function sortdesc(nums){
+    nums.sort((first,last) => last-first); //sort array in desc order
+    return nums;
+}
+console.log(sortdesc(arr));//[9, 7, 6, 5, 5,3, 3, 2, 2, 1]
 
 /* ########################## SMALLEST K INTEGERS - O(n log n)  ###################################################
 
@@ -27,8 +31,8 @@ Output: [1, 2, 2, 3]*/
 arr = [5, 9, 3, 6, 2, 1, 3, 2, 7, 5], k = 4
 
 function kSmallest(nums,k) {
-    nums.sort((first,last) => first-last);
-    return nums.slice(0,k);
+    nums.sort((first,last) => first-last); //sort ascending
+    return nums.slice(0,k); //return first k elements
     
 };
 
@@ -148,3 +152,27 @@ function factorial2(n) {
 console.log(factorial2(5));//24
 
 
+/*##################  Remove Duplicates from Array - O(n^2) / O(n) ###########
+
+Given an array of integers, return a new array containing only the unique values.
+
+The resulting array can be in any order.
+
+Example:
+
+Input: [2, 3, 1, 1, 4, 3, -2, 1]
+Output: [2, 3, 1, 4, -2] */
+
+arr = [2, 3, 1, 1, 4, 3, -2, 1]
+
+function removeDuplicates(nums) {
+    let uniqueValues = [];
+    nums.sort((first,last) => first-last); //sort array in asc order
+    for( let i =0; i<nums.length; i++){
+        if(nums[i]!=nums[i+1]){
+            uniqueValues.push(nums[i]);
+        }
+    }
+    return uniqueValues;
+}
+console.log(removeDuplicates(arr));//[ -2, 1, 2, 3, 4 ]
