@@ -176,3 +176,31 @@ function removeDuplicates(nums) {
     return uniqueValues;
 }
 console.log(removeDuplicates(arr));//[ -2, 1, 2, 3, 4 ]
+
+
+/*#####################    Maximum Sum Subarray - O(n^2) #######################################
+
+Given an input array that may contain both positive and negative integers, 
+find the sum of continous subarray of numbers which has the largest sum.
+
+Example
+
+Input: nums = [-2, -5, 6, -2, -3, 1, 5, -6]
+Output: 7
+Explanation: sum([6, -2, -3, 1, 5]) = 7  */
+
+nums = [-20, -19, -18, -17, -16, -15, -14, -13, -1, -12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2]
+output = -1
+
+function maxSumSubarray(nums) {
+    let maxSum = nums[0] //initiate maxsum to nums[0]
+    for(let i =0; i <= nums.length; i++){
+        let sum = 0; //start counter for sum
+        for(let j = i; j< nums.length; j++){
+            sum = sum +nums[j];
+            maxSum = Math.max(sum, maxSum);//update maxSum
+            }
+        }
+    return maxSum;
+}
+console.log(maxSumSubarray(nums));//-1
