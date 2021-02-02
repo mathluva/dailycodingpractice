@@ -224,12 +224,39 @@ say =  [1, 2, 3, 4, 5]
 // };
 // console.log(sort(say));
 
-arr = [5, 9, 3, 6, 2, 1, 3, 2, 7, 5], k = 4
+// arr = [5, 9, 3, 6, 2, 1, 3, 2, 7, 5], k = 4
 
-function sortdesc(nums){
-    nums.sort((first,last) => last-first); //sort array in desc order
-    return nums;
+// function sortdesc(nums){
+//     nums.sort((first,last) => last-first); //sort array in desc order
+//     return nums;
+// }
+// console.log(arr);
+
+// console.log(sortdesc(arr)); //[1, 2, 2, 3, 3,5, 5, 6, 7, 9]
+
+function factorial(n) {
+    let fact =1;
+    for(let i = 1; i <= n; i++){
+        fact = fact * i;
+    }
+    return fact;
 }
-console.log(arr);
 
-console.log(sortdesc(arr)); //[1, 2, 2, 3, 3,5, 5, 6, 7, 9]
+function fibonacci(n){
+    if (n ==0){
+        return 0;
+    }
+    else if(n==1 || n==2){
+      return 1;
+  }
+  else{
+      return (fibonacci(n-1)+fibonacci(n-2));
+  }
+}
+console.log(fibonacci(0));
+console.log(fibonacci(1));
+console.log(fibonacci(2));
+console.log(fibonacci(3));
+console.log(fibonacci(4));
+console.log(fibonacci(5));
+console.log(fibonacci(6));

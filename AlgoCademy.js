@@ -142,14 +142,38 @@ console.log(factorial(4));//24
 /*##################  Factorial using Recursion II ########### */
 
 function factorial2(n) {
-        if(n == 0){
+        if(n == 0 || n ==1){
             return 1;
         }
         else{
-            return factorial(n-1) *n;
+            return n * factorial(n-1);
         }
     }
-console.log(factorial2(5));//24
+console.log(factorial2(5));//120
+
+/*##################  Recursion Factorial ########### */
+
+function fibonacci(n){
+    if (n ==0){
+        return 0;
+    }
+    else if(n==1 || n==2){
+      return 1;
+  }
+  else{
+      return (fibonacci(n-1)+fibonacci(n-2));
+  }
+}
+console.log(fibonacci(0));//0
+console.log(fibonacci(1));//1
+console.log(fibonacci(2));//1
+console.log(fibonacci(3));//2
+console.log(fibonacci(4));//3
+console.log(fibonacci(5));//5
+console.log(fibonacci(6));//8
+
+
+
 
 
 /*##################  Remove Duplicates from Array - O(n^2) / O(n) ###########
