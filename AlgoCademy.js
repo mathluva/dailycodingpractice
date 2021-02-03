@@ -53,7 +53,7 @@ function sort(nums) {
         }
      }
     return nums;
-};
+};f
 
 console.log(sort(arr)); //[ 1, 3, 3, 4, 4, 5 ]
 
