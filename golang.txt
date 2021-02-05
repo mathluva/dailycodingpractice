@@ -93,7 +93,7 @@ func main(){
     arr := []string{"a","b", "c"}
 
     for index, value :=  range arr{
-        fmt.Println("index", index, "value", index)  //index: 0 value: a
+        fmt.Println("index", index, "value", value)  //index: 0 value: a
                                                        //index: 1 value: b
                                                        //index: 2 value: c
 
@@ -105,16 +105,48 @@ func main(){
     m := make(map[string]string)
     m["a"] = "alpha"
     m["b"] = " beta"
-    m["c"]
 
     for key, value :=  range m{
-        fmt.Println("key", key, "value", value)  //index: 0 value: a
-                                                       //index: 1 value: b
-                                                       //index: 2 value: c
-
+        fmt.Println("key", key, "value", value)  //key: a value: alpha
+                                                       //key: b value: beta
+                                            
     }
 
 }
 
+NEW FUNCTION
+func sum(x int, yint) int{
+    return x + y  // input the var name and type for arguments, after () put the type of what it will return
+    }
 
+
+CALL FUNCTION IN THE MAIN FUNCTION
+func main(){
+    result := sum(2,3)
+    fmt.Println(result)
+}
+
+
+FUNCTION THAT RETURNS MORE THAN JUST A value
+
+func sqrt( x float64) (float64, error){
+    if x <0 {
+        return 0, errors.New('Undefined for negative numbers")
+    }
+    return math.Sqrt(x), nil
+}
+
+
+call sqrt in the main function
+
+func main() {
+    result, err := sqrt(16)
+
+    if err != nil {
+        fmt.Prinln(err)
+    }
+    else{
+        fmt.Println(result)
+    }
+}
 

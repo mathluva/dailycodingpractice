@@ -53,8 +53,7 @@ function sort(nums) {
         }
      }
     return nums;
-};f
-
+    };
 console.log(sort(arr)); //[ 1, 3, 3, 4, 4, 5 ]
 
 
@@ -228,3 +227,36 @@ function maxSumSubarray(nums) {
     return maxSum;
 }
 console.log(maxSumSubarray(nums));//-1
+
+
+
+str = "javascriptloops";
+
+function vowelsAndConsonants(s) {
+    let vowels = [];
+    let consonants = [];
+    for(let i = 0; i < s.length; i++){
+        if(s[i] == "a" ||s[i]== "e" || s[i]== "i" || s[i]== "o" || s[i]== "u" ){
+            vowels.push(s[i]);
+        }
+        else{
+            consonants.push(s[i]);
+        }
+    }
+    // console.log(vowels);
+    vowels.forEach(v => console.log(v));
+}
+vowelsAndConsonants(str);
+
+str = "savascriptloops";
+function checkstrg(s){
+    for(let i =0; i<s.length-1;){
+            if(s[0]===s[s.length-1]){
+                return s[i];
+            }
+            else{
+                return false;
+            }
+    }
+    }
+console.log(checkstrg(str));
